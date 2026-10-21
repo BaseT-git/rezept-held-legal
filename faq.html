@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>Hilfe & Häufig gestellte Fragen (FAQ) – Mein Kochbuch - Rezeptsammlung</title>
+  <style>
+    :root {
+      --primary: #f97316;
+      --primary-hover: #ea580c;
+      --primary-light: #fff7ed;
+      --text-main: #1f2937;
+      --text-muted: #6b7280;
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-main: #f3f4f6;
+        --text-muted: #9ca3af;
+        --bg: #0f172a;
+        --card-bg: #1e293b;
+        --border: #334155;
+        --primary-light: #2c1a0e;
+      }
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .badge {
+      display: inline-block;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(249, 115, 22, 0.2);
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: var(--primary-light);
+      color: var(--primary);
+      border: 1px solid rgba(249, 115, 22, 0.3);
+      padding: 8px 18px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .tab-btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 26px;
+      margin-bottom: 12px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .faq-card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 12px;
+      background: var(--card-bg);
+      transition: border-color 0.2s;
+    }
+    .faq-question {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+    .faq-answer {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .highlight-list {
+      margin-top: 8px;
+      padding-left: 20px;
+      font-size: 13.5px;
+    }
+    .highlight-list li {
+      margin-bottom: 4px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="badge">Mein Kochbuch - Rezeptsammlung</div>
+      <h1>Häufig gestellte Fragen (FAQ)</h1>
+      <p class="subtitle">Antworten zu Wochenplaner, KI-Import, Synchronisation, Datenschutz & Backups</p>
+    </div>
+
+    <div class="nav-tabs">
+      <a href="#planer" class="tab-btn">📅 Wochenplaner & Einkauf</a>
+      <a href="#import" class="tab-btn">✨ KI-Import</a>
+      <a href="#sync" class="tab-btn">🔄 Synchronisation</a>
+      <a href="#datenschutz" class="tab-btn">🔒 Datenschutz & Offline</a>
+      <a href="#premium" class="tab-btn">💎 Premium & Backup</a>
+    </div>
+
+    <div id="planer">
+      <h2>📅 Wochenplaner & Einkaufsliste</h2>
+      <div class="faq-card">
+        <div class="faq-question">Wie funktioniert der Wochenplaner?</div>
+        <div class="faq-answer">
+          Im Wochenplaner kannst du deinen Speiseplan für jeden Wochentag flexibel zusammenstellen. Tippe auf „+ Gericht hinzufügen“, um Rezepte aus deiner Sammlung oder freie Notizen (z. B. „Pizza bestellen“ oder „Reste essen“) einzuplanen. Die Portionsgröße lässt sich für jeden Tag individuell anpassen.
+        </div>
+      </div>
+      <div class="faq-card">
+        <div class="faq-question">Wie übertrage ich Zutaten auf die Einkaufsliste?</div>
+        <div class="faq-answer">
+          Tippe oben im Wochenplaner auf den Button „Zutaten auf Einkaufsliste“. Es öffnet sich eine Übersicht aller benötigten Zutaten der Woche. Du kannst einzelne Zutaten abwählen, falls du sie bereits vorrätig hast. Alle ausgewählten Mengen werden automatisch aufsummiert und deiner Einkaufsliste hinzugefügt.
+        </div>
+      </div>
+      <div class="faq-card">
+        <div class="faq-question">Kann ich meine Einkaufsliste teilen oder an andere Apps senden?</div>
+        <div class="faq-answer">
+          Ja! In der Einkaufsliste findest du oben rechts ein Teilen-Symbol. Damit kannst du deine Liste als formatierten Text per WhatsApp, SMS oder Mail versenden, in die Zwischenablage kopieren oder mit einem Klick an spezialisierte Einkaufs-Apps wie „Bring!“ übergeben.
+        </div>
+      </div>
+    </div>
+
+    <div id="import">
+      <h2>✨ KI-Rezept-Import</h2>
+      <div class="faq-card">
+        <div class="faq-question">Welche Quellen kann der smarte KI-Import verarbeiten?</div>
+        <div class="faq-answer">
+          Du kannst Rezepte aus nahezu jeder Quelle mit einem Klick importieren:
+          <ul class="highlight-list">
+            <li><strong>Websites & Food-Blogs:</strong> Link kopieren und einfügen.</li>
+            <li><strong>Social Media:</strong> Instagram Reels und TikTok Video-Links direkt importieren.</li>
+            <li><strong>Foto-Scan:</strong> Fotografiere ein Rezept aus einem Buch oder einer Zeitschrift ab.</li>
+            <li><strong>PDF-Dokumente:</strong> Lade Rezeptkarten oder digitale E-Books hoch.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="faq-card">
+        <div class="faq-question">Wie viele KI-Importe stehen mir zur Verfügung?</div>
+        <div class="faq-answer">
+          <p>Als Free-Nutzer hast du ein wöchentliches Kontingent an kostenlosen KI-Importen, das sich jeden Montag automatisch erneuert.</p>
+          <p>Mit Premium kannst du grundsätzlich unbegrenzt viele Rezepte per KI importieren – ohne laufendes Abo.</p>
+          <p><strong>Hinweis zur Sicherheit:</strong> Auch bei Premium greift zur reinen Sicherheit vor automatisierten Skripten oder Missbrauch eine temporäre Grenze von 50 Importen pro Tag. Diese dient ausschließlich der Missbrauchsabwehr, beeinträchtigt das normale Kochen und Rezeptesammeln nicht und kann bei berechtigtem Bedarf (z. B. beim einmaligen Einpflegen einer sehr großen Sammlung) auf Anfrage jederzeit flexibel erhöht werden.</p>
+          <ul class="faq-highlights">
+            <li><strong>Free:</strong> Wöchentliches Freikontingent (Reset jeden Montag).</li>
+            <li><strong>Premium:</strong> Grundsätzlich unbegrenzte Importe ohne Abo.</li>
+            <li><strong>Sicherheit & Fair-Use:</strong> Temporäre 50er-Grenze/Tag zur Missbrauchsabwehr (bei Bedarf unkompliziert anpassbar).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="faq-card">
+        <div class="faq-question">Werden meine importierten Rezepte für KI-Training verwendet?</div>
+        <div class="faq-answer">
+          Nein! Wir nutzen eine lizenzierte Enterprise-Schnittstelle von Google Gemini (Tier 1 Pay-as-you-go). Gemäß den offiziellen Datenschutzrichtlinien werden deine übermittelten Texte, Links und Fotos niemals für das Training von KI-Modellen verwendet und nach der Analyse nicht serverseitig gespeichert.
+        </div>
+      </div>
+    </div>
+
+    <div id="sync">
+      <h2>🔄 Geräte-Synchronisation</h2>
+      <div class="faq-card">
+        <div class="faq-question">Wie verbinde ich zwei Geräte (z. B. Smartphone & Tablet)?</div>
+        <div class="faq-answer">
+          Ganz einfach und ohne Benutzerkonto:<br />
+          1. Öffne auf deinem Hauptgerät das Profil-Menü ➔ „Geräte-Synchronisation“.<br />
+          2. Tippe auf „Kopplungscode anzeigen“.<br />
+          3. Gib den 6-stelligen Code auf deinem Zweitgerät ein.<br /><br />
+          Schon sind beide Geräte sicher miteinander verknüpft – auch deine Premium-Lizenz gilt automatisch für beide Geräte.
+        </div>
+      </div>
+      <div class="faq-card">
+        <div class="faq-question">Wie funktioniert die Synchronisation (Schließfach-Prinzip)?</div>
+        <div class="faq-answer">
+          Die Synchronisation erfolgt nach dem „Temporären Schließfach“-Prinzip: Wenn du synchronisierst, wird dein Datenpaket verschlüsselt auf unserem Server abgelegt, bis dein zweites Gerät es abholt. Sobald die Daten übertragen sind, wird das Paket restlos vom Server gelöscht. Es verbleiben 0 Bytes deiner Rezepte dauerhaft in einer Cloud.
+        </div>
+      </div>
+    </div>
+
+    <div id="datenschutz">
+      <h2>🔒 Datenschutz & Offline</h2>
+      <div class="faq-card">
+        <div class="faq-question">Funktioniert die App auch komplett offline?</div>
+        <div class="faq-answer">
+          Ja, zu 100%! Alle deine Rezepte, Kochbücher, Fotos, Notizen, der Wochenplaner und die Einkaufsliste liegen in einer lokalen SQLite-Datenbank auf deinem Gerät. Du kannst mitten im Funkloch oder beim Kochen ohne WLAN jederzeit uneingeschränkt auf alles zugreifen. Nur für den KI-Import und die Synchronisation wird kurzzeitig Internet benötigt.
+        </div>
+      </div>
+      <div class="faq-card">
+        <div class="faq-question">Gibt es Werbung oder Tracking in der App?</div>
+        <div class="faq-answer">
+          Nein. Es gibt weder Werbebanner (wie Google AdMob) noch Third-Party Tracking-Tools (wie Meta-Pixel oder Firebase Analytics). Deine Kochgewohnheiten und Rezepte gehören dir ganz alleine.
+        </div>
+      </div>
+    </div>
+
+    <div id="premium">
+      <h2>💎 Premium & Backup</h2>
+      <div class="faq-card">
+        <div class="faq-question">Ist Premium ein Abo oder ein Einmalkauf?</div>
+        <div class="faq-answer">
+          Premium ist ein reiner Einmalkauf (Lifetime-Lizenz)! Es gibt keine wiederkehrenden monatlichen Kosten und kein verstecktes Abo. Einmal gekauft gehört die Lizenz dauerhaft dir und kann auf bis zu 2 deiner Geräte gleichzeitig genutzt werden.
+        </div>
+      </div>
+      <div class="faq-card">
+        <div class="faq-question">Wie erstelle ich ein Backup meiner Rezepte?</div>
+        <div class="faq-answer">
+          Unter Profil ➔ Datenverwaltung findest du die Option „Backup exportieren“. Damit wird eine kompakte Sicherungsdatei erstellt, die du in deiner persönlichen Cloud (Google Drive, iCloud, Dropbox) oder per E-Mail speichern kannst. Bei einem Gerätewechsel kannst du diese Datei über „Backup wiederherstellen“ mit einem Klick einspielen.
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Noch Fragen? Schreibe uns direkt eine E-Mail an <a href="mailto:entwicklung.wanke@gmail.com">entwicklung.wanke@gmail.com</a>.</p>
+      <p style="margin-top: 8px;">
+        <a href="privacy.html">Datenschutzerklärung & Impressum aufrufen</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -157,6 +157,7 @@
     <div class="nav-tabs">
       <a href="#datenschutz" class="tab-btn">Datenschutzerklärung</a>
       <a href="#impressum" class="tab-btn">Impressum</a>
+      <a href="faq.html" class="tab-btn">❓ Häufige Fragen (FAQ)</a>
     </div>
 
     <div id="datenschutz">
@@ -176,10 +177,10 @@
 
       <h2>2. Lokale Speicherung (Local-First Prinzip)</h2>
       <p>
-        Der Schutz deiner Privatsphäre steht an erster Stelle. Sämtliche in der App erstellten oder importierten Rezepte, Kochbücher, Bilder, Notizen und Einkaufslisten werden primär direkt auf deinem Endgerät in einer geschützten lokalen SQLite-Datenbank gespeichert.
+        Der Schutz deiner Privatsphäre steht an erster Stelle. Sämtliche in der App erstellten oder importierten Rezepte, Kochbücher, Bilder, Notizen, der Wochenplaner und deine Einkaufslisten werden primär direkt auf deinem Endgerät in einer geschützten lokalen SQLite-Datenbank gespeichert.
       </p>
       <p>
-        Eine Übertragung findet ausschließlich dann statt, wenn du die optionale 2-Geräte-Synchronisation aktiv nutzt (siehe Punkt 5). Es gibt keine dauerhafte zentrale Cloud-Speicherung deiner Rezepte. Du behältst jederzeit die volle Kontrolle über deine Daten und kannst diese über die integrierte Backup-Funktion selbst exportieren, sichern oder vollständig löschen.
+        Eine Übertragung findet ausschließlich dann statt, wenn du die optionale 2-Geräte-Synchronisation aktiv nutzt (siehe Punkt 6). Es gibt keine dauerhafte zentrale Cloud-Speicherung deiner Daten. Du behältst jederzeit die volle Kontrolle über deine Daten und kannst diese über die integrierte Backup-Funktion selbst exportieren, sichern oder vollständig löschen.
       </p>
 
       <h2>3. Berechtigungen der App</h2>
@@ -187,48 +188,61 @@
       <ul>
         <li>
           <strong>Kamera (android.permission.CAMERA / iOS NSCameraUsageDescription):</strong>
-          Wird ausschließlich verwendet, wenn du innerhalb der App direkt ein Foto für ein Gericht aufnimmst. Die Aufnahmen verbleiben lokal auf deinem Gerät.
+          Wird ausschließlich verwendet, wenn du innerhalb der App direkt ein Foto für ein Gericht aufnimmst oder den Foto-Scan für ein Rezept aus einem Buch nutzt. Die Aufnahmen verbleiben lokal auf deinem Gerät.
         </li>
         <li>
           <strong>Foto-Mediathek / Speicher (android.permission.READ_EXTERNAL_STORAGE / iOS NSPhotoLibraryUsageDescription):</strong>
-          Wird genutzt, um bestehende Fotos aus deiner Galerie als Rezeptbild auszuwählen oder lokale Backups auf deinem Gerät zu speichern bzw. zu laden.
+          Wird genutzt, um bestehende Fotos aus deiner Galerie als Rezeptbild auszuwählen, Rezept-PDFs zu importieren oder lokale Backups auf deinem Gerät zu speichern bzw. zu laden.
         </li>
         <li>
           <strong>Internet (android.permission.INTERNET):</strong>
-          Wird benötigt für den KI-Rezept-Import (Webseiten- & Foto-Analyse), die automatische Nährwert-Berechnung sowie für die optionale 2-Geräte-Synchronisation.
+          Wird benötigt für den KI-Rezept-Import (Web, Social Media, Foto-Scan & PDF-Analyse), die automatische Nährwert-Berechnung sowie für die optionale 2-Geräte-Synchronisation.
         </li>
       </ul>
 
       <h2>4. KI-Funktionen (Rezept-Import & Nährwert-Analyse)</h2>
       <p>
-        Die App bietet intelligente Funktionen zum Importieren von Rezepten (z. B. aus Web-Links, Fotos oder Text) sowie zur automatischen Nährwert-Berechnung.
+        Die App bietet intelligente Funktionen zum Importieren von Rezepten (aus Webseiten-Links, Instagram Reels, TikTok, Foto-Scans von Rezeptkarten/Büchern oder PDF-Dokumenten) sowie zur automatischen Nährwert-Berechnung.
       </p>
       <ul>
         <li>
-          <strong>Verarbeitung:</strong> Wenn du eine dieser Funktionen aktiv nutzt, werden die zur Strukturierung benötigten Rezepttexte oder URLs verschlüsselt (HTTPS/TLS) an unsere Backend-Schnittstelle (Supabase Edge Function) gesendet und von dort zur Verarbeitung an die Google Gemini API (Google Ireland Limited / Google LLC) übermittelt.
+          <strong>Verarbeitung:</strong> Wenn du eine dieser Funktionen aktiv nutzt, werden die zur Strukturierung benötigten Rezepttexte, URLs, Fotos oder PDF-Auszüge verschlüsselt (HTTPS/TLS) an unsere Backend-Schnittstelle (Supabase Edge Function) gesendet und von dort zur Verarbeitung an die Google Gemini API (Google Ireland Limited / Google LLC) übermittelt.
         </li>
         <li>
           <strong>Keine Nutzung zum KI-Modelltraining:</strong> Die API-Anbindung erfolgt im Rahmen einer lizenzierten Enterprise-Schnittstelle (Tier 1 Pay-as-you-go). Gemäß den offiziellen Datenschutzrichtlinien von Google werden deine Eingaben <em>nicht</em> zur Verbesserung oder zum Training von Google KI-Modellen verwendet.
         </li>
         <li>
-          <strong>Flüchtige Datenübertragung:</strong> Die Daten werden ausschließlich für den Augenblick der Erstellung des Rezepts bzw. der Nährwert-Analyse verarbeitet und nicht dauerhaft für Werbezwecke gespeichert.
+          <strong>Flüchtige Datenübertragung:</strong> Die Daten werden ausschließlich für den Augenblick der Erstellung des Rezepts bzw. der Nährwert-Analyse verarbeitet und nicht dauerhaft für Werbezwecke oder in der Cloud gespeichert.
         </li>
       </ul>
 
-      <h2>5. Geräte-Kopplung & Rezept-Synchronisation</h2>
+      <h2>5. Wochenplaner & Einkaufsliste</h2>
       <p>
-        Wenn du die Funktion zur Geräte-Synchronisation oder zum Teilen nutzt:
+        Alle eingeplanten Mahlzeiten, Wochentage, Portionsangaben und persönlichen Notizen werden ausschließlich lokal in der geräteeigenen SQLite-Datenbank gespeichert. Es findet keinerlei Verhaltens- oder Ernährungstracking statt.
+      </p>
+      <ul>
+        <li>
+          <strong>Teilen der Einkaufsliste:</strong> Das Teilen von Zutatenlisten (z. B. via WhatsApp, SMS oder Messenger) erfolgt über die native Share-Schnittstelle deines mobilen Betriebssystems. Es werden keine geteilten Texte über unsere Server geleitet.
+        </li>
+        <li>
+          <strong>Drittanbieter-Apps (z. B. Bring!):</strong> Die Übergabe von Einkaufslisten an Drittanbieter-Apps erfolgt ausschließlich auf deine Veranlassung hin direkt über lokale Deep-Links auf deinem Endgerät. Es findet kein serverseitiger Datenaustausch statt.
+        </li>
+      </ul>
+
+      <h2>6. Geräte-Kopplung & Rezept-Synchronisation</h2>
+      <p>
+        Wenn du die Funktion zur Geräte-Synchronisation nutzt:
       </p>
       <ul>
         <li>
           <strong>Pseudonyme Lizenz-Zuordnung:</strong> Die Zuordnung von bis zu 2 Geräten zu einer gemeinsamen Premium-Lizenz erfolgt ohne Benutzerkonto über eine zufällig generierte, pseudonyme Geräte-Kennung (UUID) und einen zeitlich befristeten Einmalcode (OTP, 15 Minuten Gültigkeit). Es werden keine Klarnamen, Passwörter oder E-Mail-Adressen erhoben.
         </li>
         <li>
-          <strong>Temporäres Schließfach (0 Bytes Cloud-Speicher):</strong> Beim manuellen Synchronisieren deiner Rezepte zwischen gekoppelten Geräten wird das Datenpaket verschlüsselt (TLS) temporär in unserer Datenbank (Supabase) zwischengespeichert, bis das zweite Gerät die Daten abruft. Unmittelbar nach der erfolgreichen Abholung wird das Datenpaket vom Server gelöscht. Es verbleiben 0 Bytes Rezeptdaten in der Cloud.
+          <strong>Temporäres Schließfach (0 Bytes Cloud-Speicher):</strong> Beim manuellen Synchronisieren deiner Rezepte, Kochbücher und des Wochenplaners zwischen gekoppelten Geräten wird das Datenpaket verschlüsselt (TLS) temporär in unserer Datenbank (Supabase) zwischengespeichert, bis das zweite Gerät die Daten abruft. Unmittelbar nach der erfolgreichen Abholung wird das Datenpaket vom Server gelöscht. Es verbleiben 0 Bytes Rezeptdaten in der Cloud.
         </li>
       </ul>
 
-      <h2>6. Zahlungsabwicklung (In-App-Käufe)</h2>
+      <h2>7. Zahlungsabwicklung (In-App-Käufe)</h2>
       <p>
         Die Abwicklung von In-App-Käufen (z. B. Freischaltung der Premium-Lizenz) erfolgt ausschließlich über die offiziellen Bezahlsysteme von Google Play (Google Ireland Limited) bzw. des Apple App Store (Apple Distribution International Ltd.).
       </p>
@@ -236,17 +250,17 @@
         Wir selbst erheben, verarbeiten oder speichern zu keinem Zeitpunkt deine Bank-, Kreditkarten- oder Zahlungsdaten. Die Zahlungsabwicklung unterliegt den Datenschutzbestimmungen des jeweiligen Plattformbetreibers.
       </p>
 
-      <h2>7. Keine Analyse-Tools oder Werbenetzwerke</h2>
+      <h2>8. Keine Analyse-Tools oder Werbenetzwerke</h2>
       <p>
         Die App verzichtet bewusst auf Analyse- und Tracking-Frameworks von Drittanbietern (wie z. B. Google Analytics for Firebase, Meta/Facebook SDK) sowie auf Werbenetzwerke (wie Google AdMob). Wir erstellen keine Nutzerprofile und verkaufen keinerlei Daten.
       </p>
 
-      <h2>8. Deine Rechte nach der DSGVO</h2>
+      <h2>9. Deine Rechte nach der DSGVO</h2>
       <p>Du hast jederzeit das Recht:</p>
       <ul>
         <li>Auskunft über eventuell verarbeitete Daten zu verlangen (Art. 15 DSGVO).</li>
         <li>Die Berichtigung unrichtiger Daten zu verlangen (Art. 16 DSGVO).</li>
-        <li>Die vollständige Löschung deiner Daten zu verlangen (Art. 17 DSGVO) – alle lokalen Daten kannst du jederzeit direkt in der App unter <em>Einstellungen &gt; Daten &gt; Alle Daten löschen</em> mit einem Klick unwiderruflich entfernen.</li>
+        <li>Die vollständige Löschung deiner Daten zu verlangen (Art. 17 DSGVO) – alle lokalen Daten kannst du jederzeit direkt in der App unter <em>Profil &gt; Datenverwaltung &gt; Alle Daten löschen</em> mit einem Klick unwiderruflich entfernen.</li>
         <li>Widerspruch gegen die Verarbeitung einzulegen (Art. 21 DSGVO).</li>
       </ul>
 
